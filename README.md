@@ -166,10 +166,6 @@ Football-Data maintains full copyright over the data files.
 
 The application connects to football-data.co.uk so it implements data updates as soon as they occur at football-data.co.uk .
 
-# Charts
-
-The charts in this app come from the awesome JavaScript charting framework [Highcharts]. You can find out more about this project on their website. Notice that although this application is open source and free of charge and ads, in order to use it for your business you need a highcharts licence (apart from the author's permission - check the licence part of this wiki below). For more information visit [pricing at highcharts]. The port of the JavaScript highcharts to R has been done with the also amazing [Highcharter] R package.
-
 # Development
 
 This application has been developed in R and Rstudio.
