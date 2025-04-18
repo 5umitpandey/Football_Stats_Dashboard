@@ -156,7 +156,7 @@ This tab contains the raw data as downloaded from football.data.co.uk. You can c
 
 All the data are provided from and owned by the amazing and free data base of European Football at [football-data.co.uk]. If you haven't already you can visit their site for betting information, live scores, historical data (including betting data) and much more!
 
-By using this application you agree to the terms and conditions of using their data. You can visit the corresponding part of their [website] for more information. 
+By using this application you agree to the terms and conditions of using their data. You can visit the corresponding part of their for more information. 
 
 football-data.co.uk and the developer cannot be held responsible for any mistakes in the data and offer no guarantee that the data is correct. If you do find any mistakes though, you are adviced to email football-data.co.uk so that the data can be corrected.
 
@@ -174,7 +174,6 @@ This application has been developed in R and Rstudio.
 #### Contact
 
 To contact the author please send an email to sumitpandey@myyahoo.com
-
 
 [Football Stats Dashboard]: <https://5umitpandey.shinyapps.io/Football_Stats_Dashboard/>
 [football-data.co.uk]:   <http://www.football-data.co.uk/data.php>
