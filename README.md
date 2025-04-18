@@ -180,6 +180,6 @@ This application has been developed in R and Rstudio.
 To contact the author please send an email to [sumitpandey@myyahoo.com]
 
 
-[FootballeR]: <https://5umitpandey.shinyapps.io/Football_Stats_Dashboard/>
+[Football_Stats_Dashboard]: <https://5umitpandey.shinyapps.io/Football_Stats_Dashboard/>
 [football-data.co.uk]:   <http://www.football-data.co.uk/data.php>
 [Highcharts]: <http://www.highcharts.com/>
