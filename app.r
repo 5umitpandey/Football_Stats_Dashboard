@@ -344,6 +344,18 @@ server <- function(input, output, session) {
     df
   })
   
+  
+  # Update the divisions dynamically based on the selected country
+  observe({
+    country_selected <- input$country
+    
+    # Update division choices based on the selected country
+    divisions <- unique(df_all$Division[df_all$Country == country_selected])
+    
+    # Update the division input choices
+    updateSelectInput(session, "division", choices = divisions)
+  })
+  
   # League Table Calculation
   output$league_table <- renderDT({
     df <- filtered_data()
@@ -563,4 +575,3 @@ server <- function(input, output, session) {
 
 
 shinyApp(ui, server)
-
