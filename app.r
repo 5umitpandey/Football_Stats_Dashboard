@@ -5,6 +5,7 @@ library(DT)
 library(lubridate)
 library(ggplot2)
 library(tidyr)
+library(viridis)
 
 # Load all CSVs from /data folder
 load_data <- function() {
@@ -159,7 +160,7 @@ ui <- dashboardPage(
                       ),
                       
                       p("Click the Application button at the left top to begin"),
-              
+                      
                   ),
                   
                   div(class = "footer-note",
@@ -356,6 +357,25 @@ server <- function(input, output, session) {
     updateSelectInput(session, "division", choices = divisions)
   })
   
+  observeEvent(input$season, {
+    selected_season <- input$season
+    
+    # Get the start and end year based on the selected season (e.g., 2024)
+    start_year <- as.integer(selected_season)
+    end_year <- start_year + 1
+    
+    # Define the start and end dates based on the selected season
+    start_date <- as.Date(paste0(start_year, "-06-01"))
+    end_date <- as.Date(paste0(end_year, "-08-31"))
+    
+    # Update the dateRangeInput UI
+    updateDateRangeInput(session, "daterange", 
+                         start = start_date,
+                         end = end_date,
+                         min = start_date,
+                         max = end_date)
+  })
+  
   # League Table Calculation
   output$league_table <- renderDT({
     df <- filtered_data()
@@ -456,8 +476,9 @@ server <- function(input, output, session) {
       coord_flip() +
       theme_minimal() +
       labs(title = "Total Goals per Team", x = "Team", y = "Total Goals") +
-      scale_fill_brewer(palette = "Set3")
+      scale_fill_viridis(discrete = TRUE)
   })
+  
   
   # Match Result Distribution Chart
   output$results_chart <- renderPlot({
