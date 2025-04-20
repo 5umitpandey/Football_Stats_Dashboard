@@ -24,7 +24,7 @@ and click the "Application" button at the left top of the front page to begin!
 
 **Or if you are an R user you can easily type on your console:**
 
-`shiny::runGitHub('Football_Stats_Dashboard', '5umitpandey', subidr = 'app')`
+`shiny::runGitHub('Football_Stats_Dashboard', '5umitpandey')`
 
 You would also need the following up-to-date packages to be installed on your machine:
 
